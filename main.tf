@@ -5,7 +5,7 @@ locals {
 
 module "task_label" {
   source  = "cloudposse/label/null"
-  version = "0.22.1"
+  version = "0.23.0"
   enabled = local.enabled && length(var.task_role_arn) == 0
 
   attributes = ["task"]
@@ -15,7 +15,7 @@ module "task_label" {
 
 module "service_label" {
   source  = "cloudposse/label/null"
-  version = "0.22.1"
+  version = "0.23.0"
 
   attributes = ["service"]
 
@@ -24,7 +24,7 @@ module "service_label" {
 
 module "exec_label" {
   source  = "cloudposse/label/null"
-  version = "0.22.1"
+  version = "0.23.0"
   enabled = local.enabled && length(var.task_exec_role_arn) == 0
 
   attributes = ["exec"]
